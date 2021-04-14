@@ -2,7 +2,7 @@
 <html>
     <head>
         
-        <title> AR VideoShowcase</title>
+        <title> AR Invitation </title>
         <meta name="viewport" content="width=device-width,height=device-height">
 	<meta name="apple-mobile-web-app-capable" content="yes">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -39,45 +39,45 @@
 
             // Count down Timer and Countdown Timer Component
 
-            // AFRAME.registerComponent('clock-text', {
-            //     init: function() {
-		    // console.log('Timer init entered');
-            //         var el = this.el;
-            //         this.ready = false;
-		    // el.addEventListener('textfontset', function() {
-    	    //         	this.ready = true;
-		    // }.bind(this));
-            //     },
-            //     tick: function() {
-  	        // 	var el = this.el;
-            //         if (!this.ready) {
-    	    //             return;
-            //         }
+            AFRAME.registerComponent('clock-text', {
+                init: function() {
+		    console.log('Timer init entered');
+                    var el = this.el;
+                    this.ready = false;
+		    el.addEventListener('textfontset', function() {
+    	            	this.ready = true;
+		    }.bind(this));
+                },
+                tick: function() {
+  	        	var el = this.el;
+                    if (!this.ready) {
+    	                return;
+                    }
 
-            //         var endTime = new Date("May 29, 2020 00:54:00").getTime();
-            //         var timeRem;
+                    var endTime = new Date("May 29, 2020 00:54:00").getTime();
+                    var timeRem;
 
-            //         var timer = setInterval(function() {
-            //             var currTime = new Date().getTime();
+                    var timer = setInterval(function() {
+                        var currTime = new Date().getTime();
 
-            //             var diff = endTime - currTime;
+                        var diff = endTime - currTime;
 
-            //             if(diff > 0) {
-            //                 var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            //                 var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            //                 var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            //                 var secs = Math.floor((diff % (1000 * 60)) / 1000);
-            //                 //console.log(days, hours, mins, secs);
-            //                 var timeRem = days + " days " + hours + " hrs " + mins + " mins " + secs + " secs ";
-            //                 //console.log(timeRem);
-            //             } else {
-            //                 var timeRem = "Finally! The day has come.";
-            //             }
-            //             el.setAttribute('value', timeRem);
-            //         }, 1000);
+                        if(diff > 0) {
+                            var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                            var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                            var secs = Math.floor((diff % (1000 * 60)) / 1000);
+                            //console.log(days, hours, mins, secs);
+                            var timeRem = days + " days " + hours + " hrs " + mins + " mins " + secs + " secs ";
+                            //console.log(timeRem);
+                        } else {
+                            var timeRem = "Finally! The day has come.";
+                        }
+                        el.setAttribute('value', timeRem);
+                    }, 1000);
                     
-            //     }
-            // });
+                }
+            });
 		
 		
 	    // Mappoint component
@@ -93,7 +93,7 @@
 		        const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
 			if (imgMap && intersectedElement === imgMap) {
 			    console.log("Clicked");
-			    document.location.href = "https://www.google.com/maps/place/36%C2%B039'09.3%22N+138%C2%B011'15.1%22E/@36.6525818,138.1868377,18.46z/data=!4m6!3m5!1s0x601d86ef98eece23:0x0!7e2!8m2!3d36.6525858!4d138.1875389?hl=en-IN";
+			    document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7";
 			}
 		    });
 		}
@@ -121,7 +121,7 @@
                 
                 <!-- Texture Image -->
 
-                <!-- <img id="texture" src="images/texture.jpg"> -->
+                <img id="texture" src="images/texture.jpg">
 
             </a-assets>
             
