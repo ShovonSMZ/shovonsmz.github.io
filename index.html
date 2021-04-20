@@ -11,7 +11,7 @@
             init: function () {
                 // Set up initial state and variables.
                 this.toggle = false;
-                this.vid = document.querySelector("demoVideo")
+                this.vid = document.querySelector("#demoVideo")
                 this.vid.pause();
             },
             tick: function () {
@@ -47,7 +47,7 @@
     </a-box>
 </a-marker>
 
-<a-marker vidhandler preset="custom" type="pattern" url="markers/map-pattern.patt">
+<a-marker vidhandler preset="custom" type="pattern" url="markers/scan.patt">
     <a-box position='0 0.5 0' material='opacity: 0.5; side: double'>
         <a-video  src="videos/demoVideo.mp4" position="0 0.5 0" rotation="270 0 0" play="true" width=2 height=2 ></a-video>
     </a-box>
@@ -63,7 +63,7 @@
 
 <script>
     window.addEventListener('click', function () {
-    var v = document.querySelector('demoVideo');
+    var v = document.querySelector('#demoVideo');
     v.play();
     });
 </script>
