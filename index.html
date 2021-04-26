@@ -11,6 +11,7 @@
      
         <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
         <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.5/aframe/build/aframe-ar.js"></script>
+        <script src="scripts/play-on-window-click.js"></script>
 
         <script>
                        
@@ -35,6 +36,22 @@
                 }
             });
                 
+        //     document.addEventListener("DOMContentLoaded", function() {
+        //     var video = document.querySelector('#meinVideo');
+        //     var start = document.querySelector('#start');
+        //     var stop = document.querySelector('#stop');
+        //     // Pause
+        //     //video.pause();
+        //     // Video
+        //     start.addEventListener('click', function () {
+        //         video.play();
+        //     })
+        //     stop.addEventListener('click', function () {
+        //         video.pause();
+        //     })
+        // })
+            
+
         // MapPoint component
         
         AFRAME.registerComponent('mappoint-handler', {
@@ -64,7 +81,7 @@
 
                 <!-- Video -->
                 
-                <video preload="none" id="demoVideo" response-type="arraybuffer" loop="false" onclick="this.play()" crossorigin webkit-playsinline playsinline controls>
+                <video preload="none" id="demoVideo" autoplay response-type="arraybuffer" loop="false" crossorigin webkit-playsinline playsinline controls>
                     <source  src="videos/demoVideo.mp4">
                 </video>
 
@@ -96,12 +113,12 @@
 
         </a-scene>
 
-        <script>
+        <!-- <script>
             window.addEventListener('click', function () {
             var v = document.querySelector('#demoVideo');
             v.play();
             });
-        </script>
+        </script> -->
 
 
     </body>
